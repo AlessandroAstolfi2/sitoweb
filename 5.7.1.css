@@ -1,0 +1,940 @@
+/* Stili globali */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  letter-spacing: 1px; 
+  width: 100%;
+  color: #000000;
+  overflow-x: hidden; /* Previene lo scrolling orizzontale */
+}
+
+/* Header e navigazione */
+header {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding-top: 50px; /* Modificato per menu */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background-color: rgb(43,23,166);
+  box-shadow: 0 2px 3px #2826261a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 1.5vw;
+}
+  
+  
+  .top-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  .top-menu li {
+    margin: 0 15px;
+  }
+  
+  .top-menu a {
+    text-decoration: none;
+    color: rgb(217, 217, 217);
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s; /* Aggiunto transition per border-color e background-color */
+    padding: 5px 10px; /* Aggiungi padding per creare spazio intorno al testo */
+    border: 2px solid transparent; /* Imposta il bordo trasparente per default */
+    border-radius: 15px; /* Aggiusta questo valore per il grado di arrotondamento desiderato */
+  }
+  
+  .top-menu a:hover, .top-menu a:focus, .top-menu a:active {
+    color: #ffffff;
+    background-color:rgb(43,23,166); /* Colore di sfondo al hover/focus */
+    border-color: #ffffff; /* Colore del bordo al hover/focus */
+  }
+
+  
+  
+  .hamburger {
+    border-radius: 10px;
+    display: none;
+  }
+  .hamburger-box {
+    width: 35px; /* Dimensione più grande per la box */
+    height: 30px; /* Altezza maggiore per permettere più spazio tra le linee */
+    display: block; /* Rimuovi display: flex se non necessario */
+    border:0;
+    cursor: pointer; /* Aggiungi un cursore pointer per indicare che è cliccabile */
+    position: relative; /* Assicurati che sia posizionato relativamente */
+  }
+  
+  .hamburger-inner {
+    border-radius: 5px;
+    background-color: rgb(43,23,166); /* Assicurati che il colore sia visibile sullo sfondo */
+    height: 3px; /* Altezza delle linee */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente */
+  }
+  
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    height: 3px; /* Altezza delle linee */
+    background-color:rgb(43,23,166) /* Assicurati che il colore sia visibile sullo sfondo */
+  }
+  
+  .hamburger-inner::before {
+    top: -10px; /* Distanza maggiore dalla linea centrale */
+  }
+  
+  .hamburger-inner::after {
+    bottom: -10px; /* Distanza maggiore dalla linea centrale */
+  }
+
+  
+  .header-title {
+    font-size: 7em;
+    color: rgb(43,23,166);
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    animation: slideInTitle 2s;
+  }
+  
+
+    .hero {
+      margin-bottom: 0;
+      text-align: center;
+      margin-top: 0;
+      color: rgb(43,23,166);
+      padding: 20px;
+      box-sizing: border-box;
+      animation: slideInHero 2s; /* Applica l'animazione */
+    }
+  /* Sezione introduttiva */
+  .intro-section,  .split-screen-section, .second-section, .second-section, .third-section {
+    display: flex;
+    border-radius: 0px;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding:auto;
+    align-items: center;
+    height: auto;
+    padding-top: 4%; /* Aggiungi padding-top per compensare l'altezza del menu fisso */
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin: 0;
+   
+  }
+
+
+
+  .intro-section {
+    background-color: rgb(217,217,217);
+    text-align: left;
+    position:relative;
+    align-items: flex-start;
+    min-height: auto
+  }
+
+
+ 
+  .container-intro{
+    width: 100%;
+  }
+
+  .intro-text__title {
+    color: rgb(43,23,166);
+    font-size: 3vw; /* Regola la dimensione del font a seconda delle tue esigenze */
+    font-weight: bold;
+    width: 70%;
+    margin-bottom: 1rem;
+    padding: 10px;
+  }
+  
+  .intro-text__desc {
+    color: rgb(43,23,166);
+    width: 70%;
+    font-size: 1.8vw;
+    margin-bottom: 2rem; /* Aggiungi più spazio sotto la descrizione */
+    padding: auto;
+  }
+    .intro-text__title{
+      margin: 20px 30px 30px 140px;
+    }
+    .intro-text__desc {
+      margin: 20px 30px 80px 140px;
+  }
+  .container-citazione {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 2;
+    text-align: center; /* Centra il testo della citazione */
+    padding: auto;
+}
+
+.domanda-introduttiva {
+    display: block; /* Usa block per centrare il testo con text-align */
+    color: rgb(43,23,166);
+    font-size: 3vw; /* Adegua la dimensione del testo se necessario */
+    line-height: 1.8;
+    background: linear-gradient(to right, rgb(47, 22, 209), rgb(123, 149, 227));
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0 auto; /* Centra il blocco */
+    padding: 1em; /* Adegua il padding se necessario */
+    max-width: 90%; /* Imposta una larghezza massima per gestire il wrapping del testo */
+}
+
+.domanda-introduttiva {
+  animation: 
+    slideUp 2s ease-out,
+}
+
+.citazione-autore {
+    display: block; /* Usa block per forzare una nuova linea */
+    text-align: right; /* Centra l'autore */
+    margin-top: -20px; /* Sposta più in alto l'autore */
+    margin-right: 40px;
+    font-size: 1em;
+    color: rgb(43,23,166);
+}
+  .comforta-intro{
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style:normal;
+  
+  }
+ 
+  .split-screen-section {
+    color: #000000;
+    background-color: #ffffff;
+    box-sizing: border-box;
+  }
+
+  .title-split-section{
+    color: rgb(101,124,191);
+    font-size:2.8vw;
+    font-weight: bold;
+  }
+  
+  /* Utilizza classi specifiche per la metà superiore e inferiore */
+  .split-screen-section .half-section-top,
+  .split-screen-section .half-section-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra i contenitori figli */
+    margin: 0 auto; /* Centra la sezione all'interno del split-screen-section */
+    max-width: 90%; /* Imposta la larghezza massima della sezione */
+    padding: 1.8%; /* Aggiungi padding sopra e sotto per separare le sezioni */
+  }
+
+  .split-screen-section .half-section-bottom{
+
+    margin-bottom: 3.5%;
+  }
+  
+  .split-screen-section .half-section-top .text-side,
+  .split-screen-section .half-section-bottom .text-side {
+    text-align: left;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: rgb(81, 105, 177);
+    max-width: 60%; /* Imposta un limite massimo alla larghezza del testo */
+    padding: 0 15px; /* Mantiene il testo distanziato dai bordi */
+  }
+  
+  .split-screen-section .half-section-top .image-side,
+  .split-screen-section .half-section-bottom .image-side {
+    display: flex;
+    max-width: 34%;
+    align-items: center; /* Centra l'immagine verticalmente */
+    justify-content: center; /* Centra l'immagine orizzontalmente */
+  }
+  
+  .split-screen-section .half-section-top .image-side img,
+  .split-screen-section .half-section-bottom .image-side img {
+    max-width: 75%; /* L'immagine può riempire il contenitore */
+    height: auto; /* Mantiene il rapporto di aspetto dell'immagine */
+    border-radius: 29px; /* Arrotonda i bordi dell'immagine */
+    transition: transform 0.3s ease; /* Transizione fluida per l'hover */
+  }
+  
+  .split-screen-section .half-section-top .image-side img:hover,
+  .split-screen-section .half-section-bottom .image-side img:hover {
+    transform: scale(1.05); /* Ingrandisce l'immagine del 5% quando l'utente ci passa sopra */ 
+    box-shadow: 0 15px 20px rgba(101,63,166);
+  }
+  
+
+
+  .second-section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* This will ensure that the children stretch to fill the container */
+    justify-content: space-around;
+    background-color: rgb(43, 23, 166);
+    position: relative;
+}
+  
+  .second-section-title {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    font-size: 3vw;
+    font-weight: bold;
+    transform: translateX(-50%);
+    width: 100%;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 70%;
+  }
+  
+
+
+.card1, .card2 {
+    flex: 1; /* This will make the cards grow and fill the space evenly */
+    margin: 3%; /* Adjust margin as needed */
+    padding: 20px; /* Add padding to maintain spacing inside the cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+.card1:hover, .card2:hover {
+    transform: translateY(-7px); /* Lift card slightly on hover */
+    box-shadow: 0 10px 18px #b5b5b5; /* Larger shadow on hover */
+}
+
+/* Remove specific height if set anywhere to allow cards to grow based on content */
+
+  
+  .second-section .card1 ul, 
+  .second-section .card2 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Assicurati che non ci sia margine aggiuntivo */
+  }
+  
+  .second-section .card1 ul li,
+  .second-section .card2 ul li {
+    display: flex; /* Usa flexbox per gli elementi li */
+    align-items: center; /* Allinea le icone e il testo verticalmente */
+    margin-bottom: 30px; /* Distanza tra gli elementi dell'elenco */
+  }
+  
+  .second-section .card1 ul li::before,
+  .second-section .card2 ul li::before {
+    content: ""; /* Aggiungi l'icona corrispondente */
+    margin-right: 10px; /* Spazio tra l'icona e il testo */
+    font-size: 1.5em; /* Dimensione dell'icona */
+  }
+  
+  /* Specifica le icone per ciascuna scheda */
+  .second-section .card1 ul li::before {
+    content: "•"; /* Codice Unicode per l'emoji 'spunta verde' */
+  }
+  
+  .second-section .card2 ul li::before {
+    content: "•"; /* Codice Unicode per l'emoji 'croce rossa' */
+  }
+  .card-title{
+    text-align: center;
+  }
+
+.third-section {
+  position: relative;
+  background-color: rgb(215, 215, 215);
+
+}
+.third-section-title h2{
+  position: absolute;
+  top: 10%; /* Modifica questa distanza per avvicinare la citazione all'inizio della pagina */
+  left: 50%;
+  font-size: 3vw;
+  font-weight: bold;
+  transform: translateX(-50%);
+  width: 100%;
+  color:rgb(43, 23, 166);
+  z-index: 2;
+  text-align: center; /* Centra il testo della citazione */
+  margin-bottom: 30%;
+  padding-bottom: 30%;
+}
+
+.third-section-title {
+  color: rgb(43,23,166);
+
+}
+
+ .card-third {
+  width: 450px;
+  height: 490px;
+  border-radius: 20px;
+  overflow: hidden;
+  justify-content: center;
+  align-items:center;
+  border: 2px solid #ffffff;
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
+
+  }
+
+
+  .card-third {
+    flex: 3;
+    max-width: 90%;
+    box-sizing: border-box;
+    padding: 30px;
+    
+}
+
+.card-img-third{
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 10px;
+block-size: block;
+
+}
+
+.card-body-third {
+width: 100%;
+height: 100%;
+top: 0;
+right: -120%;
+position: absolute;
+background-color: rgb(101,124,191);
+backdrop-filter: blur(5px);
+border-radius: 15px;
+color: #ffffff;
+padding: 10px;
+display: flex;
+text-align: center;
+flex-wrap: wrap;
+flex-direction: column;
+transition: 1.0s;
+}
+
+.card-third:hover .card-body-third{
+right: 0 
+}
+
+.card-title-third {
+font-size: 40px;
+text-align: center;
+font-weight: 400;
+display: block;
+margin: 0 auto;
+margin-top: 2%;
+}
+
+.card-info-third {
+font-size: 1.5vw;
+line-height: 24px;
+margin: 30px 30px;
+font-weight: 400;
+justify-content: center;
+align-items: center;
+
+}
+
+.card-btn-third{
+color:#ffffff;
+background:#6553a6;
+max-width: 170px;
+height: 50px;
+border-radius: 15px;
+border: none;
+outline: none;
+font-weight: 500;
+cursor: pointer;
+font-size: 1.3vw;
+font-weight: bold;
+text-align: center;
+position: relative;
+}
+
+.card-btn-third {
+  display: block;
+  margin: 0 auto;
+}
+
+.card-btn-third {
+  transition: transform 0.2s; /* aggiungi una transizione */
+}
+
+.card-btn-third:hover {
+  transform: scale(1.1); /* ingrandisci del 10% */
+}
+
+.card-container-third {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 2%;
+flex-basis: 40%; /* Each card takes up half the width of the container */
+scale: 1;
+overflow: hidden;
+}
+
+  
+  /* Footer */
+  .footer-bar {
+    height: auto;
+    background-color:rgb(43,23,166);
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+   /* Animazione per il titolo */
+   @keyframes slideInTitle {
+    from {
+      margin-left: -100%; /* Inizia fuori dalla schermata a sinistra */
+    }
+    to {
+      margin-left: 0; /* Termina con il titolo centrato */
+    }
+  }
+  
+  .header-title {
+    font-size: 6vw; /* Dimensione del titolo */
+    margin-top: 0; /* Rimuove margini extra in alto */
+    display: inline-block; /* Rende il titolo un blocco in linea per l'animazione */
+    animation: slideInTitle 2s; /* Applica l'animazione */
+  }
+
+  .circle-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  
+  .circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px; /* Adjusted margin */
+    transition: transform 0.3s ease-out;
+  }
+  
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .circle:hover {
+    transform: translateY(-5px);
+  }
+  
+  .circle-info {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .circleTitle {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .circleSubtitle {
+    font-style: italic;
+    color: #666;
+  }
+  
+  .linkedinLogo {
+    width: 50px;
+    margin: 10px;
+    height: 50px;
+  }
+  
+    .linkedinLogo{
+      transition: transform 0.2s; /* aggiungi una transizione */
+    }
+    
+    .linkedinLogo:hover {
+      transform: scale(1.1); /* ingrandisci del 10% */
+    }
+    
+  .footer-title {
+    font-size: 2em;
+    margin-top: 1px; /* Adjusted margin-top */
+    text-align: center;
+    color: #ffffff;
+    padding: 40px;
+  }
+  
+.third-section{
+  height: 100 vh;
+}
+  
+  
+  /* Additional media queries or adjustments may be added as needed */
+  
+  
+  
+  
+  /* Animazione per la sezione .hero */
+  @keyframes slideInHero {
+    from {
+      opacity: 0; /* Inizia con opacità 0 */
+      transform: translateY(-50px); /* Inizia sopra di 50px */
+    }
+    to {
+      opacity: 1; /* Termina con opacità 1 */
+      transform: translateY(0); /* Termina a zero */
+    }
+  }
+
+  /* Responsive adjustments */
+  /* Responsive adjustments for medium screens (tablets, etc.) */
+@media (max-width: 1024px) {
+  .header-title {
+      font-size: 4.5rem; /* Adjust font size for readability */
+  }
+
+  .split-screen-section {
+      flex-direction: column; /* Stack content vertically */
+      padding: 10px 0;
+  }
+
+  .split-screen-section .half-section-top,
+  .split-screen-section .half-section-bottom {
+      width: 100%; /* Use full width */
+      padding: 0; /* Remove side padding */
+      
+  }
+
+  .split-screen-section .half-section-top .text-side,
+  .split-screen-section .half-section-bottom .text-side,
+  .split-screen-section .half-section-top .image-side,
+  .split-screen-section .half-section-bottom .image-side  {
+      max-width: 100%; /* Allow content to expand */
+      font-size: 1.7vw;
+  }
+
+
+  .split-screen-section .half-section-top .image-side img,
+  .split-screen-section .half-section-bottom .image-side img {
+    max-width: 40%;
+    margin:auto;
+  }
+
+  .intro-text__desc {
+    font-size: 1.7vw;
+  }
+
+  .card-info-third {
+    font-size: 1.4vw;
+    font-weight: bold;
+
+  /* ... Additional styles ... */
+}
+
+
+
+/* Responsive adjustments for small screens (tablets in portrait mode, large phones) */
+@media (max-width: 768px) {
+  .domanda-introduttiva {
+      font-size: 2em; /* Adjust font size for tablets */
+      position: static; /* Remove absolute positioning */
+      text-align: center; /* Center text */
+  }
+  .citazione-autore {
+    margin-top: -1px;
+    text-align: right;
+  }
+  header {
+      margin-top: 45% ;
+  }
+
+  .card-third {
+      flex: 0 1 100%; /* Cards take full container width */
+  }
+
+  .header-title {
+      font-size: 6vw; /* Adjust font size for better readability */
+  }
+
+  .split-screen-section .half-section-top,
+  .split-screen-section .half-section-bottom {
+    flex-direction: column;
+    padding: 20px 0; /* Aumenta il padding per dispositivi più piccoli */
+  }
+
+  .split-screen-section .half-section-top .text-side,
+  .split-screen-section .half-section-bottom .text-side,
+  .split-screen-section .half-section-top .image-side,
+  .split-screen-section .half-section-bottom .image-side {
+    max-width: 100%; /* Larghezza completa su dispositivi mobili */
+    padding: 0 10px; /* Padding ridotto sui lati */
+  }
+
+  .split-screen-section .half-section-top .text-side,
+  .split-screen-section .half-section-bottom .text-side
+  {
+    font-size: 2.5vw;
+    font-weight: 700;
+  }
+  .split-screen-section .half-section-top .image-side img,
+  .split-screen-section .half-section-bottom .image-side img {
+    max-width: 30%; /* Immagini leggermente più piccole per adattarsi meglio */
+  }
+  .second-section {
+      flex-direction: column; /* Stack children vertically */
+  }
+
+  .card1, .card2 {
+      flex-basis: auto; /* Reset flex-basis */
+      max-width: 90%; /* Cards use most container width */
+      font-size: 2.5vw;
+      margin: 10px auto; /* Center cards with auto margins */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger button */
+    position: absolute;
+    top: 30px;
+    width: 50px; /* Dimensione più grande per la box */
+    height: 35px; /* Altezza maggiore per permettere più spazio tra le linee */
+    border:0;
+    border-color: #ffffff;
+    right: 25px;
+    z-index: 15;
+}
+
+
+  .top-menu {
+      height: auto; /* Auto height for menu */
+      padding: 10px 0; /* Padding for touchability */
+      font-size: 1.1rem; /* Slightly larger for touchability */
+  }
+
+  .top-menu ul {
+      display: none; /* Hide default menu on small devices */
+      flex-direction: column;
+      position: absolute;
+      top: 50px; /* Adjust based on hamburger button height */
+      right: 0;
+      background-color: transparent; 
+      width: 100%; /* Or desired width */
+      padding: 10px 0;
+  }
+
+  .top-menu ul.open {
+      display: flex; /* Show menu when hamburger is active */
+      background-color:rgb(43,23,166);
+      left: 0; 
+      right: auto;
+      border-radius: 25px;
+  }
+
+  .top-menu li {
+      margin: 10px 0; /* Increase space between menu items */
+  }
+
+  .full-screen-section {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .text-side, .image-side {
+      max-width: 100%;
+  }
+
+  .card-container-third {
+      width: 90%; /* Increase width for smaller screens */
+      gap: 5%; /* Increase gap for better visibility */
+  }
+
+  .card-third {
+      flex: 0 1 100%; /* Full width on small screens */
+  }
+
+  .card-title-third,
+  .card-info-third {
+      font-size: 3.9vw; /* Increase font size for readability */
+  }
+  .card-title-third{
+    font-size: 5vw;
+    font-weight: bold;
+  }
+  .card-btn-third {
+      padding: 2vw; /* Larger touch targets */
+      height: 40px;
+      border-radius: 10px;
+      font-size: 3.9vw ;
+  }
+
+  .image-side {
+      margin-top: 20px; /* Space between text and image */
+  }
+
+  .intro-text__title {
+      font-size: 3rem; 
+  }
+  
+  .intro-text__desc {
+      font-size: 1rem;
+  }
+  
+  .full-screen-section {
+      flex-direction: column;
+  }
+
+  .circle-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    margin-bottom: 10px;
+}
+  
+  .image-side-full-screen img {
+      max-width: 80%;
+  }
+}
+
+/* Responsive adjustments for extra small screens (smartphones) */
+/* Responsive adjustments for extra small screens (smartphones) */
+@media (max-width: 480px) {
+  body, html {
+    font-size: 14px; /* Base font size for mobile */
+  }
+
+  header {
+    padding-top: 20px; /* Adjust header padding */
+    justify-content: flex-start; /* Align content to the top */
+  }
+
+  .header-title {
+    font-size: 7vw; /* Responsive font size for the title */
+    margin: 20px 0; /* Adjust margins */
+  }
+
+  .top-menu {
+    height: auto; /* Adjust menu height for mobile */
+    background-color: #333; /* Darker background for better visibility */
+  }
+
+  .top-menu ul {
+    flex-direction: column; /* Stack menu items vertically */
+    background-color: #fff; /* Light background for the dropdown */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  .top-menu li {
+    text-align: center; /* Center align menu items */
+    border-bottom: 1px solid #ccc; /* Add a separator between items */
+  }
+
+  .top-menu a {
+    padding: 10px 15px; /* Increase tap area */
+  }
+
+  .hamburger {
+    display: inline-block; /* Show hamburger icon */
+  }
+
+  .intro-section,
+  .split-screen-section,
+  .second-section,
+  .third-section {
+    padding-top: 60px; /* Add padding to the top of sections */
+    height: auto; /* Set height to auto for flexibility */
+    padding-bottom: 20px; /* Add padding to the bottom of sections */
+  }
+
+  .intro-text__title,
+  .intro-text__desc {
+    font-size: 4vw; /* Increase font size for readability */
+    margin: 10px; /* Adjust margins */
+  }
+
+
+  .citazione-autore {
+    font-size: 3vw; /* Adjust quote and author font size */
+    padding: 0 5px; /* Add padding for text not to touch the edges */
+  }
+
+  .domanda-introduttiva{
+    font-size: 5vw;
+  }
+
+  .split-screen-section .half-section {
+    flex-direction: column; /* Stack split sections vertically */
+  }
+
+  .split-screen-section .image-side img {
+    width: 90%; /* Adjust image width */
+    margin: 0 auto; /* Center image */
+  }
+
+  .second-section .card1,
+  .second-section .card2,
+  .card-third {
+    width: 90%; /* Set card width to 90% of the screen */
+    margin: 10px auto; /* Center cards */
+  }
+
+  .footer-bar {
+    padding: 15px; /* Adjust footer padding */
+    height: auto; /* Adjust footer height */
+  }
+
+  .card-btn-third {
+    max-width: 80%;
+}
+ /* Further adjustments can be made here as needed */
+
+
